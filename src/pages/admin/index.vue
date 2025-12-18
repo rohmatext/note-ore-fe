@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AppLayout from '@/components/layouts/AppLayout.vue';
 import { useHead } from '@unhead/vue';
 
 useHead({
@@ -12,5 +13,5 @@ definePage({
 });
 </script>
 <template>
-    <div>Admin page</div>
+    <AppLayout> Dump </AppLayout>
 </template>
