@@ -7,13 +7,17 @@ import { Input } from '@/components/ui/input';
 import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from '@/components/ui/input-group';
 import { AxiosInstance } from '@/lib/axios';
 import { useAuthStore } from '@/stores/auth';
+import { useHead } from '@unhead/vue';
 import { EyeIcon, EyeOffIcon } from 'lucide-vue-next';
 import { useForm, Field as VeeField } from 'vee-validate';
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
-
 const auth = useAuthStore();
 const router = useRouter();
+
+useHead({
+    title: 'Login',
+});
 
 const { handleSubmit, isSubmitting, setErrors } = useForm({
     initialValues: {

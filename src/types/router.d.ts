@@ -30,8 +30,8 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/(admin)/admin/': RouteRecordInfo<
-      '/(admin)/admin/',
+    '/admin/': RouteRecordInfo<
+      '/admin/',
       '/admin',
       Record<never, never>,
       Record<never, never>,
@@ -56,9 +56,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/(admin)/admin/index.vue': {
+    'src/pages/admin/index.vue': {
       routes:
-        | '/(admin)/admin/'
+        | '/admin/'
       views:
         | never
     }
