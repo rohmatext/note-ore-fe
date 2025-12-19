@@ -7,6 +7,7 @@ export type CreateUserRequest = UpdateUserRequest & { password: string };
 
 export const me = () => {
     const auth = useAuthStore();
+
     return axios.get('/api/me', {
         headers: {
             Authorization: `Bearer ${auth.token}`,
@@ -14,10 +15,13 @@ export const me = () => {
     });
 };
 
-export const listUser = () => {
+export const listUser = (cursor: string) => {
     const auth = useAuthStore();
 
     return axios.get('/api/users', {
+        params: {
+            cursor,
+        },
         headers: {
             Authorization: `Bearer ${auth.token}`,
         },
