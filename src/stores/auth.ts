@@ -15,7 +15,7 @@ export const useAuthStore = defineStore('auth', () => {
         try {
             token.value = value;
             const { data } = await me();
-            const u: User = (({ id, name, username }: User) => ({ id, name, username }))(data.data);
+            const u: User = (({ id, name, username, role }: User) => ({ id, name, username, role }))(data.data);
             setUser(u);
         } catch (error) {
             $destroy();
