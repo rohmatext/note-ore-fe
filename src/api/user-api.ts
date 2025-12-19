@@ -2,7 +2,7 @@ import axios from '@/lib/axios';
 import { useAuthStore } from '@/stores/auth';
 import type { User } from '@/types/user';
 
-export type UpdateUserRequest = Omit<User, 'id'>;
+export type UpdateUserRequest = Omit<User, 'id' | 'role'>;
 export type CreateUserRequest = UpdateUserRequest & { password: string };
 
 export const me = () => {
